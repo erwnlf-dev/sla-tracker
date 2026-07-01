@@ -1,0 +1,55 @@
+[
+  {
+    "path": "src/app/layout.tsx",
+    "purpose": "Root layout with HTML/body, global styles, and fonts.",
+    "dependencies": []
+  },
+  {
+    "path": "src/app/page.tsx",
+    "purpose": "Landing page. Self-contained marketing page with components.",
+    "dependencies": [
+      "tailwindcss"
+    ]
+  },
+  {
+    "path": "src/app/dashboard/layout.tsx",
+    "purpose": "Dashboard layout with Sidebar and TopBar.",
+    "dependencies": []
+  },
+  {
+    "path": "src/app/dashboard/page.tsx",
+    "purpose": "Dashboard home. Shows summary stats and recent policy status.",
+    "dependencies": [
+      "@/lib/store"
+    ]
+  },
+  {
+    "path": "src/app/dashboard/policies/page.tsx",
+    "purpose": "Policy list and creation. Table + modal for CRUD.",
+    "dependencies": [
+      "@/lib/store"
+    ]
+  },
+  {
+    "path": "src/app/dashboard/metrics/page.tsx",
+    "purpose": "Metrics dashboard. Stat cards and a line chart for compliance.",
+    "dependencies": [
+      "@/lib/store",
+      "recharts"
+    ]
+  },
+  {
+    "path": "src/app/dashboard/incidents/page.tsx",
+    "purpose": "Incident log. Filterable table of SLA breaches.",
+    "dependencies": [
+      "@/lib/store"
+    ]
+  },
+  {
+    "path": "src/lib/store.ts",
+    "purpose": "Global state (React Context) for policies, metrics, incidents. Initial mock data.",
+    "dependencies": [
+      "react"
+    ]
+  }
+]
